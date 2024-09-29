@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Wilke Grosche / Site Title"
+title                    : "My Site"
 title_separator          : "-"
 name                     : &name "Wilke Grosche"
 description              : &description "personal description"
@@ -24,15 +24,15 @@ author:
   avatar           : "profile.png"
   name             : "Wilke Grosche"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "Physics Graduate specialising in Physical Simulation, Control Theory and Machine Learning"
   location         : "Lausanne"
   employer         : "EPFL"
   uri              : # URL
-  email            : "wilkegrosche@gmail.com" 
+  email            : "fwg@hotmail.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/my-orcid?orcid=0009-0001-3027-6281"
   semantic         : # URL
