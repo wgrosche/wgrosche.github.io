@@ -1,6 +1,6 @@
 ---
 title: "AIrcraft"
-excerpt: "Control for deformable, fixed-wing aircraft<br/><img src='/images/aircraft_trajectory'>"
+excerpt: "Control for deformable, fixed-wing aircraft<br/><img src='/images/aircraft_trajectory.png'>"
 collection: portfolio
 ---
 
