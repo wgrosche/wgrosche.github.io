@@ -21,7 +21,7 @@ repository               : "wgrosche/wgrosche.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "wilkeedit.png"
   name             : "Wilke Grosche"
   pronouns         : # example: "she/her"  
   bio              : "Physics Graduate specialising in Physical Simulation, Control Theory and Machine Learning"
