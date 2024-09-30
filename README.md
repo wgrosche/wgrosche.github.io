@@ -1,8 +1,9 @@
 # Home
-**This is my personal website.**
+**Welcome to my personal site.**
 
 # Getting Started
 
+This is a work in progress, I plan to provide samples of my work and my hobbies here. Under portfolio you can find some of the projects I have worked on at CVLab after finishing my masters. In the blog section you will, if I ever get around to it, find samples of my worldbuilding progress.
 
 ---
 <div align="center">
