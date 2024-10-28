@@ -37,7 +37,7 @@ Skills
   * OpenCV
   * Tensorflow
 * Typesetting
-  * $\latex$
+  * $\LaTeX$
 * Versioning
   * Git
 * Languages
