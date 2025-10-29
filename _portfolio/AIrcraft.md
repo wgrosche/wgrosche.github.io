@@ -67,6 +67,7 @@ Problem Extensions
 -----
 
 - External Wind
+- Rotating Earth
 
 Dynamics
 ===

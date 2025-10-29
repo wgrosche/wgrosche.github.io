@@ -16,9 +16,9 @@ Education
 
 Work experience
 ======
-* September 2022 - Current: Research Engineer
+* September 2022 - September 2025: Research Engineer
   * EPFL CVLab
-  * Projects included: Physical Simulation, Control Theory, ML Pipelining, Camera Calibration
+  * Projects included: 6DOF Aerodynamics Simulation, Time Optimal Trajectory Planning, Multiple Object Tracking, Camera Calibration
   * Supervisor: Professor Pascal Fua
 
 
@@ -27,6 +27,8 @@ Skills
 * Physical Simulation
   * COMSOL
   * SOFA
+* Control Theory and Optimisation
+  * CasADi
 * Machine Learning
   * Torch
   * Tensorflow
