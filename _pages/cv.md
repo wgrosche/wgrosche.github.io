@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* M.Ss. in Physics, ETH Zürich, 2022
+* M.Sc. in Physics, ETH Zürich, 2022
 * B.Sc. in Physics, ETH Zürich, 2019
 
 Work experience
