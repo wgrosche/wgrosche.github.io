@@ -11,5 +11,8 @@ main:
   - title: "Technical Notes"
     url: /notes/
 
+  - title: "One-Pager"
+    url: /one-pager/
+
   - title: "CV"
     url: /cv/

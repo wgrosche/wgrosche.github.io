@@ -1,0 +1,149 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{--op-text-primary:#1a1a1a;--op-text-secondary:#555;--op-text-tertiary:#999;--op-text-info:#185FA5;--op-bg-secondary:#f7f8fa;--op-border-tertiary:#e0e0e0;--op-radius-lg:8px;--op-radius-md:4px;}
+.page{font-family:'DM Sans',sans-serif;color:var(--op-text-primary);max-width:780px;margin:0 auto;padding:2rem 1.5rem;}
+.header{display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem;align-items:end;padding-bottom:1.5rem;border-bottom:0.5px solid var(--op-border-tertiary);margin-bottom:1.5rem;}
+.header-photo{width:90px;height:90px;border-radius:50%;object-fit:cover;border:2px solid var(--op-border-tertiary);}
+.name{font-family:'DM Serif Display',serif;font-size:42px;line-height:1;letter-spacing:-1px;}
+.name em{font-style:italic;color:var(--op-text-secondary);}
+.tagline{font-size:12px;font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--op-text-secondary);margin-top:8px;}
+.contact-col{text-align:right;display:flex;flex-direction:column;gap:4px;}
+.contact-item{font-family:'DM Mono',monospace;font-size:11px;color:var(--op-text-secondary);white-space:nowrap;}
+.contact-item a{color:var(--op-text-info);text-decoration:none;}
+.profile-band{background:var(--op-bg-secondary);border-radius:var(--op-radius-lg);padding:1rem 1.25rem;margin-bottom:1.5rem;font-size:13.5px;line-height:1.7;color:var(--op-text-secondary);border-left:2.5px solid #185FA5;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;}
+.full-col{margin-bottom:1.5rem;}
+.section-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#185FA5;margin-bottom:10px;font-weight:500;}
+.exp-item{padding-bottom:14px;margin-bottom:14px;border-bottom:0.5px solid var(--op-border-tertiary);}
+.exp-item:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0;}
+.exp-header{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:3px;}
+.exp-title{font-size:13px;font-weight:500;}
+.exp-date{font-family:'DM Mono',monospace;font-size:10px;color:var(--op-text-tertiary);white-space:nowrap;}
+.exp-org{font-size:11px;color:#185FA5;margin-bottom:5px;}
+.exp-desc{font-size:12px;color:var(--op-text-secondary);line-height:1.6;}
+.edu-item{margin-bottom:12px;}
+.edu-item:last-child{margin-bottom:0;}
+.edu-degree{font-size:13px;font-weight:500;}
+.edu-inst{font-size:11px;color:#185FA5;}
+.edu-year{font-family:'DM Mono',monospace;font-size:10px;color:var(--op-text-tertiary);}
+.tags-wrap{display:flex;flex-wrap:wrap;gap:6px;}
+.tag{font-size:11px;font-family:'DM Mono',monospace;padding:3px 9px;border-radius:var(--op-radius-md);background:var(--op-bg-secondary);border:0.5px solid var(--op-border-tertiary);color:var(--op-text-secondary);}
+.tag.hi{background:#E6F1FB;border-color:#B5D4F4;color:#0C447C;}
+.pub-item{font-size:12px;color:var(--op-text-secondary);margin-bottom:8px;line-height:1.6;padding-left:14px;position:relative;}
+.pub-item::before{content:'[';position:absolute;left:0;color:#185FA5;font-family:'DM Mono',monospace;font-size:11px;}
+.lang-row{display:flex;gap:8px;flex-wrap:wrap;}
+.lang-chip{font-size:11px;padding:3px 10px;border-radius:99px;background:var(--op-bg-secondary);border:0.5px solid var(--op-border-tertiary);color:var(--op-text-secondary);}
+.lang-chip strong{color:var(--op-text-primary);font-weight:500;}
+.footer{margin-top:1.5rem;padding-top:1rem;border-top:0.5px solid var(--op-border-tertiary);display:flex;justify-content:space-between;align-items:center;}
+.footer-text{font-family:'DM Mono',monospace;font-size:9px;color:var(--op-text-tertiary);letter-spacing:1px;}
+b{font-weight:500;color:var(--op-text-primary);}
+</style>
+
+<div class="page">
+  <h2 style="position:absolute;left:-9999px;">One-pager CV — Friedrich Wilke Grosche</h2>
+
+  <div class="header">
+    <img src="/images/wilkeedit.png" alt="Friedrich Wilke Grosche" class="header-photo">
+    <div>
+      <div class="name">Friedrich <em>Wilke</em> Grosche</div>
+      <div class="tagline">Research Engineer · Software Development · Data Analysis · Process Automation</div>
+    </div>
+    <div class="contact-col">
+      <span class="contact-item">+41 76 265 81 51</span>
+      <span class="contact-item">wilkegrosche@gmail.com</span>
+      <span class="contact-item"><a href="https://github.com/wgrosche">github.com/wgrosche</a></span>
+      <span class="contact-item"><a href="https://www.linkedin.com/in/wilke/">linkedin.com/in/wilke</a></span>
+      <span class="contact-item" style="margin-top:4px;">Zürich, Switzerland</span>
+    </div>
+  </div>
+
+  <div class="profile-band">
+    Physics MSc (ETH Zürich) with 3 years of research engineering at EPFL CVLab, specialising in the <b>analysis of complex challenges</b> and the development of well-considered, effective solutions across control theory, computer vision, and machine learning. Proven track record in <b>software development</b>, <b>data analysis</b>, and the <b>development of innovative solutions</b> for high-speed autonomous systems — translating ill-defined physical problems into tractable, production-grade implementations.
+  </div>
+
+  <div class="full-col">
+    <div class="section-label">Experience</div>
+
+    <div class="exp-item">
+      <div class="exp-header"><span class="exp-title">Research Engineer</span><span class="exp-date">Sep 2022 – Sep 2025</span></div>
+      <div class="exp-org">EPFL Computer Vision Lab (CVLab) — Lausanne, Switzerland</div>
+      <div class="exp-desc">
+        <b>Time-optimal MPC for fixed-wing drones</b> — End-to-end <b>software development</b> of a trajectory optimisation and time-optimal MPC stack for F5B competition conditions (100 m/s, ~50 laps / 3 min). <b>Data analysis</b> of wind tunnel, CFD, and in-flight data to build a differentiable aerodynamic surrogate, cutting force evaluation from ~8 h to ~1 ms. Independently derived an angular-rate correction resolving time-integration instability — an <b>innovative solution</b> to a previously intractable modelling gap.<br><br>
+        <b>Multi-view camera localisation &amp; calibration</b> — Led development of a camera localisation suite; <b>automated</b> axis-alignment via RANSAC plane fitting and height priors, eliminating manual world-frame recovery and substantially reducing setup time.<br><br>
+        <b>GNN-based people tracking</b> — <b>Data analysis</b>, augmentation, and model training of a graph neural network for long-term multi-view tracking with occlusions (ByteTrack / YoloX). Managed pipeline architecture and cross-team coordination as part of <b>project management</b> responsibilities across the tracking workstream.<br><br>
+        <b>SCOUT annotation pipeline</b> — Designed and built a web-based annotation tool for a 25-camera dataset; <b>automated</b> proximity-based tracklet merging and cross-view correspondence, reducing manual annotation time by ~90%.<br><br>
+        <b>Cardiac catheter simulation</b> — Developed an <b>innovative</b> physics-based catheter–heart interaction model (Cosserat rod + SDF collision) for real-time virtual surgery, delivering <b>effective solutions</b> under tight real-time constraints. <b>Communicated technical content</b> to medical collaborators with no engineering background.
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="section-label">Education</div>
+      <div class="edu-item">
+        <div class="edu-degree">MSc in Physics</div>
+        <div class="edu-inst">ETH Zürich</div>
+        <div class="edu-year">2019 – 2022 · Thesis: Model-Agnostic Explainability for ML Regression in Physical Systems</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">BSc in Physics</div>
+        <div class="edu-inst">ETH Zürich</div>
+        <div class="edu-year">2015 – 2019 · Thesis: Flux Gate Optimisation for Active Magnetic Shielding</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">A-Levels</div>
+        <div class="edu-inst">Hills Road Sixth Form, Cambridge</div>
+        <div class="edu-year">2013 – 2015 · Physics, Maths, Further Maths, Chemistry, German</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Core competencies</div>
+      <div class="tags-wrap" style="margin-bottom:14px;">
+        <span class="tag hi">Software development</span>
+        <span class="tag hi">Data analysis</span>
+        <span class="tag hi">Process automation</span>
+        <span class="tag hi">Innovative solutions</span>
+        <span class="tag hi">Project management</span>
+        <span class="tag hi">Technical communication</span>
+        <span class="tag hi">Python (15 yrs)</span>
+        <span class="tag hi">C++</span>
+        <span class="tag hi">CasADi · IPOPT</span>
+        <span class="tag hi">PyTorch · TensorFlow</span>
+        <span class="tag">Trajectory optimisation</span>
+        <span class="tag">MPC</span>
+        <span class="tag">OpenCV · MMDetection</span>
+        <span class="tag">Docker · Slurm · RunAI</span>
+        <span class="tag">OpenSFM</span>
+        <span class="tag">Git · LaTeX · Django</span>
+      </div>
+
+      <div class="section-label">Languages</div>
+      <div class="lang-row" style="margin-bottom:14px;">
+        <span class="lang-chip"><strong>English</strong> — native</span>
+        <span class="lang-chip"><strong>German</strong> — native</span>
+        <span class="lang-chip"><strong>French</strong> — intermediate</span>
+      </div>
+
+      <div class="section-label">Soft skills</div>
+      <div class="tags-wrap">
+        <span class="tag">Problem abstraction</span>
+        <span class="tag">Cross-disciplinary collaboration</span>
+        <span class="tag">Technical presentation</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-col">
+    <div class="section-label">Publications</div>
+    <div class="pub-item">Engilberge, <b>Wilke Grosche</b>, Fua. <em>No Identity, no problem: Motion through detection for people tracking.</em> arXiv 2411.16466, 2024.</div>
+    <div class="pub-item">Engilberge et al. <em>Unified People Tracking with Graph Neural Networks.</em> arXiv 2507.08494, 2025.</div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-text">References: Prof. Pascal Fua (EPFL) · Dr. Andreas Adelmann (PSI) · Dr. Martin Engilberge</span>
+    <span class="footer-text" style="color:#185FA5;">github.com/wgrosche/AIrcraft</span>
+  </div>
+</div>
