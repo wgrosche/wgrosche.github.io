@@ -5,6 +5,7 @@ permalink: /posts/2024/11/AIrcraft_post_1/
 tags:
   - control
   - AIrcraft
+series: "AIrcraft Control"
 ---
 
 AIrcraft

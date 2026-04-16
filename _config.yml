@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "My Site"
+title                    : "Wilke Grosche"
 title_separator          : "-"
 name                     : &name "Wilke Grosche"
-description              : &description "personal description"
+description              : &description "Research Engineer — Physical Simulation, Control Theory & Machine Learning"
 url                      : https://wgrosche.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "wgrosche/wgrosche.github.io"

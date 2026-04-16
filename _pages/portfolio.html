@@ -1,14 +1,23 @@
 ---
 layout: archive
-title: "Portfolio"
+title: "Projects"
 permalink: /portfolio/
-author_profile: true
+author_profile: false
 ---
 
 {% include base_path %}
 
-
+<h2 class="archive__subtitle">Research</h2>
 {% for post in site.portfolio %}
-  {% include archive-single.html %}
+  {% if post.category == "research" %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+
+<h2 class="archive__subtitle">Games</h2>
+{% for post in site.portfolio %}
+  {% if post.category == "games" %}
+    {% include archive-single.html %}
+  {% endif %}
 {% endfor %}
 
