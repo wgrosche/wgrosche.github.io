@@ -1,0 +1,390 @@
+%!TEX program = pdflatex
+% ─────────────────────────────────────────────────────────────
+%  Lebenslauf — Friedrich Wilke Grosche
+%  Standalone pdfLaTeX, kompilierbar auf Overleaf
+% ─────────────────────────────────────────────────────────────
+\documentclass[a4paper,10pt]{article}
+
+% ── Packages ──────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[
+  left=0pt, right=0pt, top=0pt, bottom=0pt,
+  nohead, nofoot, nomarginpar
+]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{amssymb}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=sidebarAccent,
+  linkcolor=sidebarAccent,
+  pdfauthor={Friedrich Wilke Grosche},
+  pdftitle={Lebenslauf -- Friedrich Wilke Grosche},
+}
+
+\pagestyle{empty}
+
+% ── Colour palette ────────────────────────────────────────────
+\definecolor{sidebar}{HTML}{4B5C6B}        % dark blue-grey sidebar
+\definecolor{sidebarText}{HTML}{FFFFFF}     % white text on sidebar
+\definecolor{sidebarAccent}{HTML}{3E98A0}   % teal accent for headings
+\definecolor{accentGold}{HTML}{C8A951}      % gold underlines
+\definecolor{mainHeading}{HTML}{1B2A41}     % dark navy for main headings
+\definecolor{mainText}{HTML}{333333}        % body text
+\definecolor{mainLight}{HTML}{777777}       % lighter text (dates, org)
+\definecolor{ruleColor}{HTML}{1B2A41}       % horizontal rules
+
+% ── Layout constants ──────────────────────────────────────────
+\newlength{\sidebarwidth}
+\setlength{\sidebarwidth}{6.8cm}
+\newlength{\mainwidth}
+\setlength{\mainwidth}{\dimexpr\paperwidth-\sidebarwidth\relax}
+\newlength{\sidebarpadding}
+\setlength{\sidebarpadding}{0.6cm}
+\newlength{\mainpadding}
+\setlength{\mainpadding}{0.8cm}
+
+% ── Reusable commands ─────────────────────────────────────────
+% Sidebar section heading (teal + gold underline)
+\newcommand{\sidebarsection}[1]{%
+  \vspace{10pt}%
+  {\color{sidebarAccent}\bfseries\large\MakeUppercase{#1}}\\[-2pt]%
+  {\color{accentGold}\rule{3cm}{1.2pt}}%
+  \vspace{6pt}\par%
+}
+
+% Main section heading (navy with lines above/below)
+\newcommand{\mainsection}[1]{%
+  \vspace{14pt}%
+  {\color{ruleColor}\hrule height 0.8pt}%
+  \vspace{6pt}%
+  {\color{mainHeading}\bfseries\large\MakeUppercase{#1}}%
+  \vspace{4pt}%
+  {\color{ruleColor}\hrule height 0.8pt}%
+  \vspace{8pt}\par%
+}
+
+% Decorative diamond divider
+\newcommand{\divider}{%
+  \begin{center}%
+    \vspace{2pt}%
+    {\color{mainLight}\small$\diamond$\hspace{6pt}$\diamond$\hspace{6pt}$\diamond$}%
+    \vspace{2pt}%
+  \end{center}%
+}
+
+% Experience entry
+\newcommand{\expentry}[4]{%
+  % #1 = title, #2 = dates, #3 = org, #4 = description
+  {\color{mainHeading}\bfseries #1}\hfill{\color{mainLight}\small\itshape #2}\\[1pt]%
+  {\color{sidebarAccent}\small\itshape #3}\\[4pt]%
+  {\color{mainText}\small #4}\par%
+  \vspace{6pt}%
+}
+
+% Education entry (sidebar)
+\newcommand{\eduentry}[4]{%
+  % #1 = title, #2 = dates, #3 = institution, #4 = city
+  {\color{sidebarText}\bfseries\small\MakeUppercase{#1}}\\[1pt]%
+  {\color{sidebarText}\small #2}\\[1pt]%
+  {\color{sidebarText}\small #3}\\[0pt]%
+  {\color{sidebarText}\small #4}\par%
+  \vspace{8pt}%
+}
+
+% Sidebar check-item
+\newcommand{\checkitem}[1]{%
+  {\color{sidebarAccent}\faCheck}~~{\color{sidebarText}\small #1}\par\vspace{3pt}%
+}
+
+% Sidebar bullet item
+\newcommand{\sideitem}[1]{%
+  {\color{sidebarAccent}\scriptsize\raisebox{1pt}{$\blacksquare$}}~~{\color{sidebarText}\small #1}\par\vspace{2pt}%
+}
+
+
+% ══════════════════════════════════════════════════════════════
+\begin{document}
+
+% ══════════════  PAGE 1  ══════════════════════════════════════
+\noindent
+\begin{tikzpicture}[remember picture, overlay]
+  % Sidebar background
+  \fill[sidebar] (current page.north west) rectangle
+    ([xshift=\sidebarwidth]current page.south west);
+\end{tikzpicture}%
+%
+\noindent
+\begin{minipage}[t][\textheight]{\sidebarwidth}
+  \begin{center}
+    \vspace{0.7cm}
+
+    % ── Photo placeholder ──
+    % Ersetze 'wilkeedit.png' durch deinen Dateinamen in Overleaf
+    % \includegraphics[width=4cm,height=4cm]{wilkeedit.png}
+    \begin{tikzpicture}
+      \draw[sidebarAccent, line width=2pt] (0,0) circle (2cm);
+      \node[text=sidebarText, font=\small] at (0,0) {Foto hier einf\"ugen};
+    \end{tikzpicture}
+
+    \vspace{0.5cm}
+  \end{center}
+
+  \hspace{\sidebarpadding}%
+  \begin{minipage}[t]{\dimexpr\sidebarwidth-2\sidebarpadding\relax}
+
+    % ── KONTAKT ──
+    \sidebarsection{Kontakt}
+    {\color{sidebarText}\small
+      \faIcon{map-marker-alt}~~Z\"urich, Schweiz\\[3pt]
+      \faIcon{phone-alt}~~+41 76 265 81 51\\[3pt]
+      \faIcon{envelope}~~\href{mailto:wilkegrosche@gmail.com}{wilkegrosche@gmail.com}\\[3pt]
+      \faIcon{github}~~\href{https://github.com/wgrosche}{github.com/wgrosche}\\[3pt]
+      \faIcon{linkedin}~~\href{https://www.linkedin.com/in/wilke/}{linkedin.com/in/wilke}%
+    }
+
+    % ── EXPERTISE ──
+    \sidebarsection{Expertise}
+    \checkitem{Python (15+ Jahre, Fortgeschritten)}
+    \checkitem{C++ (Kompetent)}
+    \checkitem{CasADi \textbullet{} IPOPT}
+    \checkitem{PyTorch \textbullet{} TensorFlow}
+    \checkitem{OpenCV \textbullet{} MMDetection}
+    \checkitem{Docker \textbullet{} Slurm \textbullet{} RunAI}
+    \checkitem{Git \textbullet{} \LaTeX{} \textbullet{} CMake}
+    \checkitem{Django \textbullet{} NumPy \textbullet{} SciPy}
+
+    % ── SPRACHEN ──
+    \sidebarsection{Sprachen}
+    \sideitem{Englisch (Muttersprache)}
+    \sideitem{Deutsch (Muttersprache)}
+    \sideitem{Franz\"osisch (fliessend)}
+
+    % ── SOFT SKILLS ──
+    \sidebarsection{Soft Skills}
+    \sideitem{Problemabstraktion \& Formalisierung}
+    \sideitem{Interdisziplin\"are Kommunikation}
+    \sideitem{Technische Pr\"asentation}
+
+  \end{minipage}
+\end{minipage}%
+%
+% ── MAIN COLUMN (PAGE 1) ─────────────────────────────────────
+\begin{minipage}[t][\textheight]{\mainwidth}
+  \hspace{\mainpadding}%
+  \begin{minipage}[t]{\dimexpr\mainwidth-2\mainpadding\relax}
+    \vspace{0.7cm}
+
+    % ── NAME / TITLE ──
+    \begin{center}
+      {\color{mainHeading}\fontsize{28}{32}\selectfont\bfseries
+       F\,R\,I\,E\,D\,R\,I\,C\,H~~\,W\,I\,L\,K\,E~~\,G\,R\,O\,S\,C\,H\,E}\\[6pt]
+      {\color{mainLight}\normalsize Research Engineer}
+    \end{center}
+    \divider
+
+    % ── ÜBER MICH ──
+    \mainsection{\"Uber mich}
+    {\color{mainText}\small
+      Deutsch-britischer Physik-Absolvent (MSc, ETH Z\"urich) mit 3 Jahren Erfahrung als Research
+      Engineer am EPFL CVLab. Schwerpunkt auf der Verbindung von Regelungstheorie, Computer
+      Vision und maschinellem Lernen. Experte in der Entwicklung hochperformanter
+      Autonomie-Stacks f\"ur schnelle Starrfl\"ugelflugzeuge (100\,m/s) mit Kernkompetenz in der
+      \"Uberf\"uhrung komplexer physikalischer Systeme in handhabbare Optimierungsprobleme.
+    }
+
+    % ── BERUFSERFAHRUNG ──
+    \mainsection{Berufserfahrung}
+
+    {\color{mainHeading}\bfseries Research Engineer}\hfill{\color{mainLight}\small\itshape 09.2022 -- 09.2025}\\[1pt]
+    {\color{sidebarAccent}\small\itshape EPFL Computer Vision Lab (CVLab), Lausanne, Schweiz}\\[6pt]
+
+    {\color{mainText}\small
+      \textbf{Zeitoptimale MPC f\"ur Starrfl\"ugel-Drohnen}
+      \textit{(Kooperation mit dem Schweizerischen Forschungszentrum)} ---
+      Entwicklung zeitoptimaler MPC und Trajektorienoptimierung f\"ur eine Starrfl\"ugel-Drohne
+      unter F5B-Wettbewerbsbedingungen (100\,m/s, ca.\ 50 Runden \`a 300\,m in 3\,min). Aufbau
+      eines differenzierbaren aerodynamischen Surrogatmodells unter Integration von
+      CFD-Daten und physikalischen Grundmodellen.
+      (\href{https://github.com/wgrosche/AIrcraft}{github.com/wgrosche/AIrcraft}).
+      (2{,}5 Jahre)
+    }
+    \vspace{6pt}
+
+    {\color{mainText}\small
+      \textbf{Kameralokalisierung und -kalibrierung f\"ur Multi-View-Tracking} ---
+      Leitung der Entwicklung einer Multi-Kamera-Lokalisierungs- und Kalibrierungssuite;
+      automatisierte Achsenausrichtung mittels RANSAC-Ebenenanpassung und Kamerah\"ohen-Priors
+      zur zuverl\"assigen Weltkoordinaten-Rekonstruktion.
+      (\href{https://github.com/cvlab-epfl/MARMOT}{github.com/cvlab-epfl/MARMOT}). (1 Jahr)
+    }
+    \vspace{6pt}
+
+    {\color{mainText}\small
+      \textbf{ML-Modelltraining f\"ur Multi-View-Personentracking} ---
+      Datenerweiterung, Pipelining und Training eines Graph Neural Networks f\"ur
+      Langzeit-Personentracking mit Verdeckungen (modifizierte ByteTrack- und
+      YoloX-Versionen). (1 Jahr)
+    }
+    \vspace{6pt}
+
+    {\color{mainText}\small
+      \textbf{Annotationspipeline f\"ur Multi-View-Datensatz} ---
+      Leitung der Entwicklung eines webbasierten Multi-View-Annotationstools
+      (\href{https://github.com/cvlab-epfl/multicam-gt}{github.com/cvlab-epfl/multicam-gt})
+      f\"ur den \"offentlichen SCOUT-Datensatz
+      (\href{https://scout.epfl.ch/}{scout.epfl.ch});
+      automatisiertes Tracklet-Merging reduzierte die manuelle Annotationszeit um ca.\ 90\,\%.
+      (8 Monate)
+    }
+    \vspace{6pt}
+
+    {\color{mainText}\small
+      \textbf{Physikbasierte Herz- und Kathetersimulation} ---
+      Entwicklung einer physikbasierten Katheter-Herz-Interaktionssimulation f\"ur virtuelle
+      Herzkatheterisierung (Cosserat-Stabmodell, SDF-basierte Kollisionserkennung) in Echtzeit.
+      (5 Monate)
+    }
+
+  \end{minipage}
+\end{minipage}
+
+% ══════════════  PAGE 2  ══════════════════════════════════════
+\newpage
+\noindent
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[sidebar] (current page.north west) rectangle
+    ([xshift=\sidebarwidth]current page.south west);
+\end{tikzpicture}%
+%
+\noindent
+\begin{minipage}[t][\textheight]{\sidebarwidth}
+  \hspace{\sidebarpadding}%
+  \begin{minipage}[t]{\dimexpr\sidebarwidth-2\sidebarpadding\relax}
+    \vspace{0.7cm}
+
+    % ── AUSBILDUNG ──
+    \sidebarsection{Ausbildung}
+
+    \eduentry{M.Sc.\ Physik}{09.2019 -- 04.2022}{ETH Z\"urich}{Schweiz}
+    {\color{sidebarText}\scriptsize\itshape Thesis: Model-Agnostic Explainability\\for ML Regression in Physical Systems\\
+    Betreuer: Dr.\ A.\ Adelmann (PSI),\\ Prof.\ Dr.\ Ce Zhang (ETH Z\"urich)}
+    \vspace{10pt}
+
+    \eduentry{B.Sc.\ Physik}{09.2015 -- 09.2019}{ETH Z\"urich}{Schweiz}
+    {\color{sidebarText}\scriptsize\itshape Thesis: Optimising Flux Gate Positions\\for Active Magnetic Shielding\\
+    Betreuer: Prof.\ Dr.\ K.\,S.\ Kirch (ETH Z\"urich)}
+    \vspace{10pt}
+
+    \eduentry{A-Levels}{09.2013 -- 09.2015}{Hills Road Sixth Form College}{Cambridge, GB}
+    {\color{sidebarText}\scriptsize\itshape Physics, Maths, Further Maths,\\Chemistry, German}
+    \vspace{4pt}
+
+    % ── PERSÖNLICH ──
+    \sidebarsection{Pers\"onlich}
+    \sideitem{geb.\ 1996}
+    \sideitem{Deutsch-britisch}
+    \sideitem{Ledig}
+
+    % ── INTERESSEN ──
+    \sidebarsection{Interessen}
+    \sideitem{Kompetitive Brettspiele (Eurogames)}
+    \sideitem{Fantasy-Literatur}
+    \sideitem{Wandern, Bouldern, Skifahren}
+    \sideitem{Kreuzwortr\"atsel}
+
+    % ── REFERENZEN ──
+    \sidebarsection{Referenzen}
+    {\color{sidebarText}\small
+      \textbf{Prof.\ Pascal Fua}\\
+      {\scriptsize Leiter CVLab, EPFL}\\[6pt]
+      \textbf{Dr.\ Andreas Adelmann}\\
+      {\scriptsize Masterthesis-Betreuer, PSI}\\[6pt]
+      \textbf{Dr.\ Martin Engilberge}\\
+      {\scriptsize Projektleiter Tracking}\\[4pt]
+      {\scriptsize\itshape (Kontaktdaten auf Anfrage)}
+    }
+
+  \end{minipage}
+\end{minipage}%
+%
+% ── MAIN COLUMN (PAGE 2) ─────────────────────────────────────
+\begin{minipage}[t][\textheight]{\mainwidth}
+  \hspace{\mainpadding}%
+  \begin{minipage}[t]{\dimexpr\mainwidth-2\mainpadding\relax}
+    \vspace{0.7cm}
+
+    % ── Repeated name header ──
+    \begin{center}
+      {\color{mainHeading}\fontsize{28}{32}\selectfont\bfseries
+       F\,R\,I\,E\,D\,R\,I\,C\,H~~\,W\,I\,L\,K\,E~~\,G\,R\,O\,S\,C\,H\,E}\\[6pt]
+      {\color{mainLight}\normalsize Research Engineer}
+    \end{center}
+    \divider
+
+    % ── TECHNISCHES DETAIL ──
+    \mainsection{Technisches Detail: Projekte}
+
+    {\color{mainText}\small
+      \textbf{Zeitoptimale MPC f\"ur Starrfl\"ugel-Drohnen}
+      \textit{(Kooperation mit Microsoft Research)} ---
+      Trajektorienoptimierung und zeitoptimale MPC f\"ur eine unmotorisierte
+      Starrfl\"ugel-Drohne f\"ur den F5B-Wettbewerb (bis zu 100\,m/s, ca.\ 50 Runden
+      \`a 300\,m in 3\,min), einschliesslich aerodynamischer Systemidentifikation aus
+      Windkanal-, CFD- und Flugdaten. Aufbau eines differenzierbaren Surrogatmodells
+      mittels CasADi und IPOPT, Reduktion der aerodynamischen Kraftberechnung von
+      ca.\ 8\,Stunden (CFD) auf ca.\ 1\,ms. Eigenst\"andige Herleitung einer
+      Drehratenkorrrektur zur Ber\"ucksichtigung dynamischer Effekte, die in der CFD
+      fehlen --- L\"osung von Zeitintegrationsinstabilit\"aten im Trajektorienverlauf.
+    }
+    \vspace{8pt}
+
+    {\color{mainText}\small
+      \textbf{Kameralokalisierung und -kalibrierung f\"ur Multi-View-Tracking} ---
+      Leitung der Kameralokalisierung und -kalibrierung f\"ur ein Multi-View-Trackingsystem,
+      einschliesslich einer automatisierten Achsenausrichtungsmethode f\"ur
+      OpenSFM-Rekonstruktionen mittels RANSAC-Ebenenanpassung auf Keypoint-dichten
+      Regionen in Kombination mit Kamerah\"ohen-Priors zur Bestimmung der $z$-Achsenorientierung.
+      Anpassung von ByteTrack und YOLOX f\"ur Bodenebenen-Betrieb durch Projektion der
+      Detektionen auf den Boden zur sinnvollen kamera\"ubergreifenden Korrespondenz.
+    }
+    \vspace{8pt}
+
+    {\color{mainText}\small
+      \textbf{Annotationspipeline f\"ur Multi-View-Datensatz} ---
+      Aufbau einer Annotationspipeline f\"ur einen Multi-View-Personentracking-Datensatz
+      mit zusammenh\"angend \"uberlappenden Sichtfeldern \"uber 25 Kameras
+      (\href{https://scout.epfl.ch/}{scout.epfl.ch}), die Trajektorienanalyse \"uber
+      ca.\ 10-min\"utige Zeitr\"aume erm\"oglicht. Automatisiertes n\"ahebasiertes
+      Tracklet-Merging und kamera\"ubergreifende Korrespondenz reduzierten die manuelle
+      Annotationszeit um ca.\ 90\,\%.
+    }
+
+    % ── PUBLIKATIONEN ──
+    \mainsection{Publikationen}
+    {\color{mainText}\small
+      \begin{enumerate}[leftmargin=1.4em, itemsep=4pt, label={[\arabic*]}]
+        \item M.\ Engilberge, \textbf{F.\ Wilke Grosche} und P.\ Fua.
+              \textit{No Identity, no problem: Motion through detection for people tracking.}
+              2024. arXiv: \href{https://arxiv.org/abs/2411.16466}{2411.16466}.
+        \item M.\ Engilberge et al.\
+              \textit{Unified People Tracking with Graph Neural Networks.}
+              2025. arXiv: \href{https://arxiv.org/abs/2507.08494}{2507.08494}.
+      \end{enumerate}
+    }
+
+  \end{minipage}
+\end{minipage}
+
+\end{document}
