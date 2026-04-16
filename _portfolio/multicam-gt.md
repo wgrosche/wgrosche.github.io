@@ -1,30 +1,31 @@
 ---
 title: "MultiCam-GT"
-excerpt: "Multi-camera annotation webapp<br/><img src='/images/multicam-gt.png'>"
+excerpt: "Multi-view annotation pipeline<br/><img src='/images/multicam-gt.png'>"
 collection: portfolio
 category: research
 ---
 
 ## Overview
 
-Updated version of the EPFL MultiCam-GT Tool — a multi-view object annotation webapp for pedestrian detection datasets.
+Annotation pipeline for multi-view people tracking datasets, used in the construction of the public [SCOUT dataset](https://scout.epfl.ch/). Automated tracklet merging reduced manual annotation time by ~90%. (8 months)
 
 ## Problem
 
-Creating ground-truth annotations for multi-camera pedestrian detection datasets requires spatially consistent labelling across views, accounting for varying terrain elevation and maintaining temporal coherence of object tracks.
+Annotating multi-view pedestrian detection datasets with contiguous overlapping fields of view across 25 cameras requires spatially consistent labelling, temporal coherence of tracks at ~10-minute timescales, and efficient tooling to make the annotation volume tractable.
 
 ## Features
 
-- **Elevation modelling**: Mesh-based ground plane representation to handle varying terrain, improving annotation accuracy in non-flat environments
-- **Object transformation**: Full 3D object representation using dimensions and spatial orientation
-- **Tracklet merging**: Functionality for combining fragmented tracklets into coherent object tracks
-- **Trajectory visualisation**: Tools for visualising and analysing object movement patterns across camera views
-- **Database integration**: All transformation and tracking data stored in PostgreSQL for efficient data management and retrieval
+- **Multi-view annotation**: Web-based tool for spatially-aware annotation with cross-view consistency across 25 cameras
+- **Automated tracklet merging**: Proximity-based tracklet merging and cross-view correspondence to minimise manual effort
+- **Trajectory analysis**: Support for trajectory analysis at ~10-minute timescales
+- **Elevation modelling**: Mesh-based ground plane representation for varying terrain
+- **Database integration**: All transformation and tracking data stored in PostgreSQL
 
 ## Technical Details
 
-Built with Django and PostgreSQL on the backend, with a JavaScript frontend for interactive annotation. The tool processes multi-camera setups and provides a web interface for spatially-aware annotation with real-time cross-view consistency.
+Built with Django and PostgreSQL on the backend, with a JavaScript frontend for interactive annotation. The automated tracklet merging pipeline was the key contribution, reducing the manual annotation burden by approximately 90% and making the construction of the SCOUT dataset feasible.
 
 ## Links
 
 - [GitHub Repository](https://github.com/cvlab-epfl/multicam-gt)
+- [SCOUT Dataset](https://scout.epfl.ch/)

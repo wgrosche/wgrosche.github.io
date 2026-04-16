@@ -1,27 +1,27 @@
 ---
 title: "MARMOT"
-excerpt: "Multi-View people tracking<br/><img src='/images/marmotsample.png'>"
+excerpt: "Multi-view camera localisation and tracking<br/><img src='/images/marmotsample.png'>"
 collection: portfolio
 category: research
 ---
 
 ## Overview
 
-Multi-view pedestrian tracking in the ground plane, with automated camera calibration and ground plane estimation via structure from motion.
+Multi-camera localisation, calibration, and ground-plane pedestrian tracking system with automated axis-alignment. (1 year)
 
 ## Problem
 
-Tracking people across multiple camera views requires solving several interconnected problems: calibrating cameras with potentially varying intrinsic and extrinsic parameters, establishing a common ground plane, and associating detections across views to produce consistent tracks.
+Deploying a multi-view tracking system requires robust camera localisation and calibration that can recover reliable world-frame geometry — including consistent axis orientation — from diverse camera setups with minimal manual intervention.
 
 ## Approach
 
-- **Camera calibration**: Automated intrinsic and extrinsic calibration for multi-camera setups
-- **Ground plane estimation**: Structure from motion to establish a shared ground plane across views
-- **Multi-view tracking**: Pedestrian detection and tracking projected into the ground plane, fusing information from all available camera views
+- **Camera localisation and calibration**: Led development of a multi-camera localisation and calibration suite for the multi-view tracking system
+- **Automated axis-alignment**: Developed an automated axis-alignment method for OpenSFM reconstructions using RANSAC plane fitting on keypoint-dense regions combined with camera height priors to recover z-axis orientation
+- **Ground-plane tracking**: Adapted ByteTrack and YOLOX for ground-plane operation by projecting detections onto the floor to enable meaningful cross-view correspondence
 
 ## Technical Details
 
-The pipeline takes raw multi-camera video feeds and produces calibrated camera models and ground-plane pedestrian trajectories. The structure-from-motion component handles the geometric setup, while the tracking module operates in the estimated ground plane for robust multi-view association.
+The system handles the full pipeline from raw multi-camera video to calibrated camera models and ground-plane pedestrian trajectories. The RANSAC-based axis alignment removes the need for manual ground-plane annotation, and the projected-detection approach enables robust cross-view association for tracking.
 
 ## Links
 
